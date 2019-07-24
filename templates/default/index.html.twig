@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Myges{% endblock %}
+
+{% block body %}
+
+<h2>{{ 'matiere.title'|trans }}</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{{ 'matiere.nom'|trans }}</th>
+            <th>{{ 'note.title'|trans }}</th>
+            <th>{{ 'matiere.coef'|trans }}</th>
+            <th>{{ 'note.date'|trans }}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for note in notes %}
+        <tr>
+            <td>{{ note.matiere.name }}</td>
+            <td>{{ note.note }}</td>
+            <td>{{ note.matiere.coefficient }}</td>
+            <td>{{ note.dateadded|date('Y-m-d H:i:s') }}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>{{ 'note.moyenne'|trans }} {{ moyenne }}</p>
+
+<h2>{{ 'note.add'|trans }}</h2>
+
+{{ form_start(add_note) }}
+    {{ form_row(add_note.note) }}
+    {{ form_row(add_note.matiere) }}
+    {{ form_row(add_note.save) }}
+{{ form_end(add_note) }}
+
+{% endblock %}

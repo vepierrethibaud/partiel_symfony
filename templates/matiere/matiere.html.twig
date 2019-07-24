@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<h1>{{ matiere.name }}</h1>
+  <h2>{{ 'matiere.coef'|trans }} : {{ matiere.coefficient }}</h2>
+
+	<h2>{{ 'matiere.update_title'|trans }}</h2>
+	{{ form(edit_form) }}
+
+  <a href="{{ path('matiereDelete', {'id': matiere.id}) }}" title="delete">
+    <button type="button" name="button">{{ 'delete'|trans }}</button>
+  </a>
+
+{% endblock %}

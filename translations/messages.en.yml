@@ -1,0 +1,23 @@
+note:
+  added: Note added
+  title: Note
+  date: Added date
+  add: Add a new note
+  moyenne: Average :
+
+
+matiere:
+  title: Subject
+  update_title: Update subject
+  see: Look at the subject
+  nom: Name
+  coef: Coefficient
+  added: Subject added
+  add: Add subject
+  delete: delete subject
+  deleted: Subject have been delete
+  updated: Subject have been update
+
+nav:
+  home: Home
+  matiere: Subjects

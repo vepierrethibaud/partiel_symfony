@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Matières{% endblock %}
+
+{% block body %}
+
+  <h2>{{ 'matiere.title'|trans }}</h2>
+
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>{{ 'matiere.nom'|trans }}</th>
+              <th>{{ 'matiere.coef'|trans }}</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for matiere in matieres %}
+          <tr>
+              <td>{{ matiere.name }}</td>
+              <td>{{ matiere.coefficient }}</td>
+              <td>
+                  <a href="{{ path('matiere', {'id': matiere.id}) }}">
+                      <button type="button" name="button">{{ 'matiere.see'|trans }}</button>
+                  </a>
+              </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+
+  <h2>{{ 'matiere.add'|trans }}</h2>
+
+  {{ form_start(add_matiere) }}
+      {{ form_row(add_matiere.name) }}
+      {{ form_row(add_matiere.coefficient) }}
+      {{ form_row(add_matiere.save) }}
+  {{ form_end(add_matiere) }}
+
+{% endblock %}

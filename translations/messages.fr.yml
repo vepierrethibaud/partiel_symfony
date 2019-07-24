@@ -1,0 +1,22 @@
+note:
+  added: Note ajoutée
+  title: Note
+  date: Date d'ajout
+  add: Ajouter une note
+  moyenne: Moyenne :
+
+matiere:
+  title: Matière
+  update_title: Mettre à jour la matière
+  see: Voir la matière
+  added: Matière ajoutée
+  nom: Nom
+  coef: Coefficient
+  add: Ajouter une matière
+  delete: Supprimer la matière
+  deleted: La matière à été supprimé
+  updated: La matière à été mise à jour
+
+nav:
+  home: Accueil
+  matiere: Matières
